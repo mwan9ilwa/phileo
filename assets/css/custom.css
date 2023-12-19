@@ -1,0 +1,16 @@
+/* Define the animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to the brand logos */
+.single-brand {
+    animation: fadeIn 1s ease-in-out; /* Change animation duration and timing function as needed */
+}
