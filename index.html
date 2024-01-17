@@ -39,7 +39,6 @@
 
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="assets/css/responsive.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .single-brand {
             text-align: center;
@@ -48,9 +47,30 @@
 
         .single-brand img {
             max-width: 100px;
-            /* Adjust the size of each logo */
             height: auto;
         }
+
+        .fullscreen-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            display: none;
+            overflow-y: auto;
+        }
+
+        .fullscreen-image img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        
     </style>
 
 </head>
@@ -131,7 +151,7 @@
                                 <div class="slider-product-image d-none d-md-block">
                                     <img src="assets/images/slider/1.jpg" alt="Slider">
                                     <div class="slider-discount-tag">
-                                        <p>-50% <br> OFF</p>
+                                        <p>FREE <br> QUOTE</p>
                                     </div>
                                 </div> <!-- slider product image -->
                             </div>
@@ -142,8 +162,8 @@
                                     </h1>
                                     <p class="mb-25" data-animation="fadeInUp" data-delay="0.9s">"Explore. Experience.
                                         Escape. Our Holidays & Tours: Your Passport to Adventure!"</p>
-                                    <a class="main-btn" href="#" data-animation="fadeInUp" data-delay="1.5s">Explore
-                                        More <i class="lni-chevron-right"></i></a>
+                                    <a class="main-btn" href="#contact" data-animation="fadeInUp"
+                                        data-delay="1.5s">Contact Us <i class="lni-chevron-right"></i></a>
                                 </div> <!-- slider product content -->
                             </div>
                         </div> <!-- row -->
@@ -157,7 +177,7 @@
                                 <div class="slider-product-image d-none d-md-block">
                                     <img src="assets/images/slider/3.jpg" alt="Slider">
                                     <div class="slider-discount-tag">
-                                        <p>-20% <br> OFF</p>
+                                        <p>FREE<br> QUOTE</p>
                                     </div>
                                 </div> <!-- slider product image -->
                             </div>
@@ -168,8 +188,8 @@
                                     </h1>
                                     <p class="mb-25" data-animation="fadeInUp" data-delay="0.9s">"Experience Seamless
                                         Global Travel with Expert Flights and Visa Services, Tailored Just for You!"</p>
-                                    <a class="main-btn" href="#" data-animation="fadeInUp" data-delay="1.5s">Explore
-                                        More <i class="lni-chevron-right"></i></a>
+                                    <a class="main-btn" href="#contact" data-animation="fadeInUp"
+                                        data-delay="1.5s">Contact Us <i class="lni-chevron-right"></i></a>
                                 </div> <!-- slider product content -->
                             </div>
                         </div> <!-- row -->
@@ -227,22 +247,22 @@
                 <div class="col-lg-6">
                     <div class="single-discount-product mt-30">
                         <div class="product-image">
-                            <img src="assets/images/discount-product/product-1.jpg" alt="Product">
+                            <img src="assets/images/discount-product/product-3.jpg" alt="Product">
                         </div> <!-- product image -->
                         <div class="product-content">
-                            <h4 class="content-title mb-15">Hotel Accommodation <br> and Transfers</h4>
-                            <a href="#">View Collection <i class="lni-chevron-right"></i></a>
+                            <h4 class="content-title mb-15" style="color: white;">Local travel</h4>
+                            <a href="#v-pills-decorative" style="color: white;">View Collection <i class="lni-chevron-right"></i></a>
                         </div> <!-- product content -->
                     </div> <!-- single discount product -->
                 </div>
                 <div class="col-lg-6">
                     <div class="single-discount-product mt-30">
                         <div class="product-image">
-                            <img src="assets/images/discount-product/product-2.jpg" alt="Product">
+                            <img src="assets/images/discount-product/product-4.jpg" alt="Product">
                         </div> <!-- product image -->
                         <div class="product-content">
-                            <h4 class="content-title mb-15">Local and <br>International travel</h4>
-                            <a href="#">View Collection <i class="lni-chevron-right"></i></a>
+                            <h4 class="content-title mb-15" style="color: white;">Travel tips</h4>
+                            <!-- <a href="#v-pills-outdoor" style="color: white;">View Collection <i class="lni-chevron-right"></i></a> -->
                         </div> <!-- product content -->
                     </div> <!-- single discount product -->
                 </div>
@@ -262,367 +282,15 @@
                         <h4 class="collection-tilte">OUR TOP DESTINATIONS</h4>
                         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
                             aria-orientation="vertical">
-                            <!-- <a class="active" id="v-pills-furniture-tab" data-toggle="pill" href="#v-pills-furniture" role="tab" aria-controls="v-pills-furniture" aria-selected="true">Accomodation</a> -->
+                            <a class="active" id="v-pills-decorative-tab" data-toggle="pill" href="#v-pills-decorative" role="tab" aria-controls="v-pills-decorative" aria-selected="true">Local </a>
 
-                            <a id="v-pills-decorative-tab" data-toggle="pill" href="#v-pills-decorative" role="tab"
-                                aria-controls="v-pills-decorative" aria-selected="false">Vacation</a>
-
-                            <!-- <a id="v-pills-lighting-tab" data-toggle="pill" href="#v-pills-lighting" role="tab" aria-controls="v-pills-lighting" aria-selected="false">Holidays</a> -->
-
-                            <a id="v-pills-outdoor-tab" data-toggle="pill" href="#v-pills-outdoor" role="tab"
-                                aria-controls="v-pills-outdoor" aria-selected="false">Day Tours</a>
-
-                            <a id="v-pills-storage-tab" data-toggle="pill" href="#v-pills-storage" role="tab"
-                                aria-controls="v-pills-storage" aria-selected="false">Business</a>
-
-                            <a id="v-pills-furniture-tab" data-toggle="pill" href="#v-pills-furniture" role="tab"
-                                aria-controls="v-pills-storage" aria-selected="false">Holidays</a>
+                            <a id="v-pills-outdoor-tab" data-toggle="pill" href="#v-pills-outdoor" role="tab" aria-controls="v-pills-outdoor" aria-selected="false">International</a>
                         </div> <!-- nav -->
                     </div> <!-- collection menu -->
                 </div>
                 <div class="col-lg-9 col-md-8">
                     <div class="tab-content" id="v-pills-tabContent">
-                        <div class="tab-pane fade" id="v-pills-furniture" role="tabpanel"
-                            aria-labelledby="v-pills-furniture-tab">
-                            <div class="product-items mt-30">
-                                <div class="row product-items-active">
-                                    <div class="col-md-4">
-                                        <div class="single-product-items">
-                                            <div class="product-item-image">
-                                                <a href="#"><img src="assets/images/product/p-1.jpg" alt="Product"></a>
-                                                <div class="product-discount-tag">
-                                                    <p>-60%</p>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-content text-center mt-30">
-                                                <h5 class="product-title"><a href="#">Cape Town</a></h5>
-                                                <ul class="rating">
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                </ul>
-                                                <span class="regular-price">$49.00</span>
-                                                <span class="discount-price">$69.00</span>
-                                            </div>
-                                        </div> <!-- single product items -->
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="single-product-items">
-                                            <div class="product-item-image">
-                                                <a href="#"><img src="assets/images/product/p-2.jpg" alt="Product"></a>
-                                                <div class="product-discount-tag">
-                                                    <p>-20%</p>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-content text-center mt-30">
-                                                <h5 class="product-title"><a href="#">Johannesburg</a></h5>
-                                                <ul class="rating">
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                </ul>
-                                                <span class="regular-price">$129.00</span>
-                                                <span class="discount-price">$159.00</span>
-                                            </div>
-                                        </div> <!-- single product items -->
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="single-product-items">
-                                            <div class="product-item-image">
-                                                <a href="#"><img src="assets/images/product/p-3.jpg" alt="Product"></a>
-                                                <div class="product-discount-tag">
-                                                    <p>-10%</p>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-content text-center mt-30">
-                                                <h5 class="product-title"><a href="#">Durban</a></h5>
-                                                <ul class="rating">
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star"></i></li>
-                                                </ul>
-                                                <span class="regular-price">$89.00</span>
-                                                <span class="discount-price">$129.00</span>
-                                            </div>
-                                        </div> <!-- single product items -->
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="single-product-items">
-                                            <div class="product-item-image">
-                                                <a href="#"><img src="assets/images/product/p-1.jpg" alt="Product"></a>
-                                                <div class="product-discount-tag">
-                                                    <p>-60%</p>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-content text-center mt-30">
-                                                <h5 class="product-title"><a href="#">Port Elizabeth</a></h5>
-                                                <ul class="rating">
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                </ul>
-                                                <span class="regular-price">$59.00</span>
-                                                <span class="discount-price">$69.00</span>
-                                            </div>
-                                        </div> <!-- single product items -->
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="single-product-items">
-                                            <div class="product-item-image">
-                                                <a href="#"><img src="assets/images/product/p-2.jpg" alt="Product"></a>
-                                                <div class="product-discount-tag">
-                                                    <p>-60%</p>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-content text-center mt-30">
-                                                <h5 class="product-title"><a href="#">Windhoek</a></h5>
-                                                <ul class="rating">
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                </ul>
-                                                <span class="regular-price">$59.00</span>
-                                                <span class="discount-price">$69.00</span>
-                                            </div>
-                                        </div> <!-- single product items -->
-                                    </div>
-                                </div> <!-- row -->
-                            </div> <!-- product items -->
-                        </div> <!-- tab pane -->
-
-                        <div class="tab-pane fade" id="v-pills-decorative" role="tabpanel"
-                            aria-labelledby="v-pills-decorative-tab">
-                            <div class="product-items mt-30">
-                                <div class="row product-items-active">
-                                    <div class="col-md-4">
-                                        <div class="single-product-items">
-                                            <div class="product-item-image">
-                                                <a href="#"><img src="assets/images/product/p-1.jpg" alt="Product"></a>
-                                                <div class="product-discount-tag">
-                                                    <p>-60%</p>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-content text-center mt-30">
-                                                <h5 class="product-title"><a href="#">Luanda</a></h5>
-                                                <ul class="rating">
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                </ul>
-                                                <span class="regular-price">$59.00</span>
-                                                <span class="discount-price">$69.00</span>
-                                            </div>
-                                        </div> <!-- single product items -->
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="single-product-items">
-                                            <div class="product-item-image">
-                                                <a href="#"><img src="assets/images/product/p-2.jpg" alt="Product"></a>
-                                                <div class="product-discount-tag">
-                                                    <p>-60%</p>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-content text-center mt-30">
-                                                <h5 class="product-title"><a href="#">Maputo</a></h5>
-                                                <ul class="rating">
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                </ul>
-                                                <span class="regular-price">$59.00</span>
-                                                <span class="discount-price">$69.00</span>
-                                            </div>
-                                        </div> <!-- single product items -->
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="single-product-items">
-                                            <div class="product-item-image">
-                                                <a href="#"><img src="assets/images/product/p-3.jpg" alt="Product"></a>
-                                                <div class="product-discount-tag">
-                                                    <p>-60%</p>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-content text-center mt-30">
-                                                <h5 class="product-title"><a href="#">Vilanculos</a></h5>
-                                                <ul class="rating">
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                </ul>
-                                                <span class="regular-price">$59.00</span>
-                                                <span class="discount-price">$69.00</span>
-                                            </div>
-                                        </div> <!-- single product items -->
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="single-product-items">
-                                            <div class="product-item-image">
-                                                <a href="#"><img src="assets/images/product/p-1.jpg" alt="Product"></a>
-                                                <div class="product-discount-tag">
-                                                    <p>-60%</p>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-content text-center mt-30">
-                                                <h5 class="product-title"><a href="#">Eswatini</a></h5>
-                                                <ul class="rating">
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                </ul>
-                                                <span class="regular-price">$59.00</span>
-                                                <span class="discount-price">$69.00</span>
-                                            </div>
-                                        </div> <!-- single product items -->
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="single-product-items">
-                                            <div class="product-item-image">
-                                                <a href="#"><img src="assets/images/product/p-2.jpg" alt="Product"></a>
-                                                <div class="product-discount-tag">
-                                                    <p>-60%</p>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-content text-center mt-30">
-                                                <h5 class="product-title"><a href="#">Sishen</a></h5>
-                                                <ul class="rating">
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                </ul>
-                                                <span class="regular-price">$59.00</span>
-                                                <span class="discount-price">$69.00</span>
-                                            </div>
-                                        </div> <!-- single product items -->
-                                    </div>
-                                </div> <!-- row -->
-                            </div> <!-- product items -->
-                        </div> <!-- tab pane -->
-
-                        <div class="tab-pane fade" id="v-pills-lighting" role="tabpanel"
-                            aria-labelledby="v-pills-lighting-tab">
-                            <div class="product-items mt-30">
-                                <div class="row product-items-active">
-                                    <div class="col-md-4">
-                                        <div class="single-product-items">
-                                            <div class="product-item-image">
-                                                <a href="#"><img src="assets/images/product/p-1.jpg" alt="Product"></a>
-                                                <div class="product-discount-tag">
-                                                    <p>-60%</p>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-content text-center mt-30">
-                                                <h5 class="product-title"><a href="#">Dubai</a></h5>
-                                                <ul class="rating">
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                </ul>
-                                                <span class="regular-price">$59.00</span>
-                                                <span class="discount-price">$69.00</span>
-                                            </div>
-                                        </div> <!-- single product items -->
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="single-product-items">
-                                            <div class="product-item-image">
-                                                <a href="#"><img src="assets/images/product/p-2.jpg" alt="Product"></a>
-                                                <div class="product-discount-tag">
-                                                    <p>-60%</p>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-content text-center mt-30">
-                                                <h5 class="product-title"><a href="#">Zanzibar</a></h5>
-                                                <ul class="rating">
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                </ul>
-                                                <span class="regular-price">$59.00</span>
-                                                <span class="discount-price">$69.00</span>
-                                            </div>
-                                        </div> <!-- single product items -->
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="single-product-items">
-                                            <div class="product-item-image">
-                                                <a href="#"><img src="assets/images/product/p-3.jpg" alt="Product"></a>
-                                                <div class="product-discount-tag">
-                                                    <p>-60%</p>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-content text-center mt-30">
-                                                <h5 class="product-title"><a href="#">Zanzibar</a></h5>
-                                                <ul class="rating">
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                </ul>
-                                                <span class="regular-price">$59.00</span>
-                                                <span class="discount-price">$69.00</span>
-                                            </div>
-                                        </div> <!-- single product items -->
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="single-product-items">
-                                            <div class="product-item-image">
-                                                <a href="#"><img src="assets/images/product/p-1.jpg" alt="Product"></a>
-                                                <div class="product-discount-tag">
-                                                    <p>-60%</p>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-content text-center mt-30">
-                                                <h5 class="product-title"><a href="#">Zanzibar</a></h5>
-                                                <ul class="rating">
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                </ul>
-                                                <span class="regular-price">$59.00</span>
-                                                <span class="discount-price">$69.00</span>
-                                            </div>
-                                        </div> <!-- single product items -->
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="single-product-items">
-                                            <div class="product-item-image">
-                                                <a href="#"><img src="assets/images/product/p-2.jpg" alt="Product"></a>
-                                                <div class="product-discount-tag">
-                                                    <p>-60%</p>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-content text-center mt-30">
-                                                <h5 class="product-title"><a href="#">Zanzibar</a></h5>
-                                                <ul class="rating">
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                    <li><i class="lni-star-filled"></i></li>
-                                                </ul>
-                                                <span class="regular-price">$59.00</span>
-                                                <span class="discount-price">$69.00</span>
-                                            </div>
-                                        </div> <!-- single product items -->
-                                    </div>
-                                </div> <!-- row -->
-                            </div> <!-- product items -->
-                        </div> <!-- tab pane -->
-
-                        <div class="tab-pane fade show active" id="v-pills-outdoor" role="tabpanel"
-                            aria-labelledby="v-pills-outdoor-tab">
+                        <div class="tab-pane fade show active" id="v-pills-decorative" role="tabpanel" aria-labelledby="v-pills-decorative-tab">
                             <div class="product-items mt-30">
                                 <div class="row product-items-active">
                                     <div class="col-md-4">
@@ -630,7 +298,7 @@
                                             <div class="product-item-image">
                                                 <a href="#"><img src="assets/images/product/dt.jpg" alt="Product"></a>
                                                 <div class="product-discount-tag">
-                                                    <p>-60%</p>
+                                                    <p>-10%</p>
                                                 </div>
                                             </div>
                                             <div class="product-item-content text-center mt-30">
@@ -651,7 +319,7 @@
                                             <div class="product-item-image">
                                                 <a href="#"><img src="assets/images/product/dt2.jpg" alt="Product"></a>
                                                 <div class="product-discount-tag">
-                                                    <p>-60%</p>
+                                                    <p>-10%</p>
                                                 </div>
                                             </div>
                                             <div class="product-item-content text-center mt-30">
@@ -672,7 +340,7 @@
                                             <div class="product-item-image">
                                                 <a href="#"><img src="assets/images/product/dt1.jpg" alt="Product"></a>
                                                 <div class="product-discount-tag">
-                                                    <p>-60%</p>
+                                                    <p>-10%</p>
                                                 </div>
                                             </div>
                                             <div class="product-item-content text-center mt-30">
@@ -688,13 +356,13 @@
                                             </div>
                                         </div> <!-- single product items -->
                                     </div>
-                                    
+
                                     <div class="col-md-4">
                                         <div class="single-product-items">
                                             <div class="product-item-image">
                                                 <a href="#"><img src="assets/images/product/dt3.jpg" alt="Product"></a>
                                                 <div class="product-discount-tag">
-                                                    <p>-60%</p>
+                                                    <p>-10%</p>
                                                 </div>
                                             </div>
                                             <div class="product-item-content text-center mt-30">
@@ -712,18 +380,17 @@
                                     </div>
                                 </div> <!-- row -->
                             </div> <!-- product items -->
-                        </div> <!-- tab pane -->
+                        </div>
 
-                        <div class="tab-pane fade" id="v-pills-storage" role="tabpanel"
-                            aria-labelledby="v-pills-storage-tab">
+                        <div class="tab-pane fade" id="v-pills-outdoor" role="tabpanel" aria-labelledby="v-pills-outdoor-tab">
                             <div class="product-items mt-30">
                                 <div class="row product-items-active">
                                     <div class="col-md-4">
                                         <div class="single-product-items">
                                             <div class="product-item-image">
-                                                <a href="#"><img src="assets/images/product/p-1.jpg" alt="Product"></a>
+                                                <a href="#"><img src="assets/images/product/dubai.jpg" alt="Product"></a>
                                                 <div class="product-discount-tag">
-                                                    <p>-60%</p>
+                                                    <p>-10%</p>
                                                 </div>
                                             </div>
                                             <div class="product-item-content text-center mt-30">
@@ -734,92 +401,154 @@
                                                     <li><i class="lni-star-filled"></i></li>
                                                     <li><i class="lni-star-filled"></i></li>
                                                 </ul>
-                                                <span class="regular-price">$59.00</span>
-                                                <span class="discount-price">$69.00</span>
+                                                <!-- <span class="regular-price">$59.00</span> -->
+                                                <!-- <span class="discount-price">$69.00</span> -->
                                             </div>
                                         </div> <!-- single product items -->
                                     </div>
                                     <div class="col-md-4">
                                         <div class="single-product-items">
                                             <div class="product-item-image">
-                                                <a href="#"><img src="assets/images/product/p-2.jpg" alt="Product"></a>
+                                                <a href="#"><img src="assets/images/product/jozi.jpg" alt="Product"></a>
                                                 <div class="product-discount-tag">
-                                                    <p>-60%</p>
+                                                    <p>-10%</p>
                                                 </div>
                                             </div>
                                             <div class="product-item-content text-center mt-30">
-                                                <h5 class="product-title"><a href="#">Singapore</a></h5>
+                                                <h5 class="product-title"><a href="#">Johannesberg</a></h5>
                                                 <ul class="rating">
                                                     <li><i class="lni-star-filled"></i></li>
                                                     <li><i class="lni-star-filled"></i></li>
                                                     <li><i class="lni-star-filled"></i></li>
                                                     <li><i class="lni-star-filled"></i></li>
                                                 </ul>
-                                                <span class="regular-price">$59.00</span>
-                                                <span class="discount-price">$69.00</span>
+                                                <!-- <span class="regular-price">$59.00</span> -->
+                                                <!-- <span class="discount-price">$69.00</span> -->
                                             </div>
                                         </div> <!-- single product items -->
                                     </div>
                                     <div class="col-md-4">
                                         <div class="single-product-items">
                                             <div class="product-item-image">
-                                                <a href="#"><img src="assets/images/product/p-3.jpg" alt="Product"></a>
+                                                <a href="#"><img src="assets/images/product/durb1.jpg" alt="Product"></a>
                                                 <div class="product-discount-tag">
-                                                    <p>-60%</p>
+                                                    <p>-10%</p>
                                                 </div>
                                             </div>
                                             <div class="product-item-content text-center mt-30">
-                                                <h5 class="product-title"><a href="#">Hong Kong</a></h5>
+                                                <h5 class="product-title"><a href="#">Durban</a></h5>
                                                 <ul class="rating">
                                                     <li><i class="lni-star-filled"></i></li>
                                                     <li><i class="lni-star-filled"></i></li>
                                                     <li><i class="lni-star-filled"></i></li>
                                                     <li><i class="lni-star-filled"></i></li>
                                                 </ul>
-                                                <span class="regular-price">$59.00</span>
-                                                <span class="discount-price">$69.00</span>
+                                                <!-- <span class="regular-price">$59.00</span> -->
+                                                <!-- <span class="discount-price">$69.00</span> -->
+                                            </div>
+                                        </div> <!-- single product items -->
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="single-product-items">
+                                            <div class="product-item-image">
+                                                <a href="#"><img src="assets/images/product/cape.jpg" alt="Product"></a>
+                                                <div class="product-discount-tag">
+                                                    <p>-10%</p>
+                                                </div>
+                                            </div>
+                                            <div class="product-item-content text-center mt-30">
+                                                <h5 class="product-title"><a href="#">Cape Town</a></h5>
+                                                <ul class="rating">
+                                                    <li><i class="lni-star-filled"></i></li>
+                                                    <li><i class="lni-star-filled"></i></li>
+                                                    <li><i class="lni-star-filled"></i></li>
+                                                    <li><i class="lni-star-filled"></i></li>
+                                                </ul>
+                                                <!-- <span class="regular-price">$59.00</span> -->
+                                                <!-- <span class="discount-price">$69.00</span> -->
                                             </div>
                                         </div> <!-- single product items -->
                                     </div>
                                     <div class="col-md-4">
                                         <div class="single-product-items">
                                             <div class="product-item-image">
-                                                <a href="#"><img src="assets/images/product/p-1.jpg" alt="Product"></a>
+                                                <a href="#"><img src="assets/images/product/port-eli.jpg" alt="Product"></a>
                                                 <div class="product-discount-tag">
-                                                    <p>-60%</p>
+                                                    <p>-10%</p>
                                                 </div>
                                             </div>
                                             <div class="product-item-content text-center mt-30">
-                                                <h5 class="product-title"><a href="#">London</a></h5>
+                                                <h5 class="product-title"><a href="#">Port Elizabeth</a></h5>
                                                 <ul class="rating">
                                                     <li><i class="lni-star-filled"></i></li>
                                                     <li><i class="lni-star-filled"></i></li>
                                                     <li><i class="lni-star-filled"></i></li>
                                                     <li><i class="lni-star-filled"></i></li>
                                                 </ul>
-                                                <span class="regular-price">$59.00</span>
-                                                <span class="discount-price">$69.00</span>
+                                                <!-- <span class="regular-price">$59.00</span> -->
+                                                <!-- <span class="discount-price">$69.00</span> -->
                                             </div>
                                         </div> <!-- single product items -->
                                     </div>
                                     <div class="col-md-4">
                                         <div class="single-product-items">
                                             <div class="product-item-image">
-                                                <a href="#"><img src="assets/images/product/p-2.jpg" alt="Product"></a>
+                                                <a href="#"><img src="assets/images/product/windhoek.jpg" alt="Product"></a>
                                                 <div class="product-discount-tag">
-                                                    <p>-60%</p>
+                                                    <p>-10%</p>
                                                 </div>
                                             </div>
                                             <div class="product-item-content text-center mt-30">
-                                                <h5 class="product-title"><a href="#">Barcelona</a></h5>
+                                                <h5 class="product-title"><a href="#">Windhoek</a></h5>
                                                 <ul class="rating">
                                                     <li><i class="lni-star-filled"></i></li>
                                                     <li><i class="lni-star-filled"></i></li>
                                                     <li><i class="lni-star-filled"></i></li>
                                                     <li><i class="lni-star-filled"></i></li>
                                                 </ul>
-                                                <span class="regular-price">$59.00</span>
-                                                <span class="discount-price">$69.00</span>
+                                                <!-- <span class="regular-price">$59.00</span> -->
+                                                <!-- <span class="discount-price">$69.00</span> -->
+                                            </div>
+                                        </div> <!-- single product items -->
+                                    </div>
+                                    <!-- <div class="col-md-4">
+                                        <div class="single-product-items">
+                                            <div class="product-item-image">
+                                                <a href="#"><img src="assets/images/product/eswatini.jpg" alt="Product"></a>
+                                                <div class="product-discount-tag">
+                                                    <p>-10%</p>
+                                                </div>
+                                            </div>
+                                            <div class="product-item-content text-center mt-30">
+                                                <h5 class="product-title"><a href="#">Eswatini</a></h5>
+                                                <ul class="rating">
+                                                    <li><i class="lni-star-filled"></i></li>
+                                                    <li><i class="lni-star-filled"></i></li>
+                                                    <li><i class="lni-star-filled"></i></li>
+                                                    <li><i class="lni-star-filled"></i></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    <div class="col-md-4">
+                                        <div class="single-product-items">
+                                            <div class="product-item-image">
+                                                <a href="#"><img src="assets/images/product/luanda2.jpg" alt="Product"></a>
+                                                <div class="product-discount-tag">
+                                                    <p>-10%</p>
+                                                </div>
+                                            </div>
+                                            <div class="product-item-content text-center mt-30">
+                                                <h5 class="product-title"><a href="#">Luanda</a></h5>
+                                                <ul class="rating">
+                                                    <li><i class="lni-star-filled"></i></li>
+                                                    <li><i class="lni-star-filled"></i></li>
+                                                    <li><i class="lni-star-filled"></i></li>
+                                                    <li><i class="lni-star-filled"></i></li>
+                                                </ul>
+                                                <!-- <span class="regular-price">$59.00</span> -->
+                                                <!-- <span class="discount-price">$69.00</span> -->
                                             </div>
                                         </div> <!-- single product items -->
                                     </div>
@@ -856,7 +585,7 @@
                         <div class="services">
                             <img src="assets/images/services/services.jpg" alt="">
                             <br><br>
-                            <img src="assets/images/services/services.jpg" alt="">
+                            <!-- <img src="assets/images/services/services.jpg" alt=""> -->
                             <a href="#" class="main-btn mt-30">Read More <i class="lni-chevron-right"></i></a>
                         </div> <!-- services btn -->
                     </div> <!-- services left -->
@@ -872,7 +601,7 @@
                                     </div>
                                     <div class="services-content mt-20">
                                         <h5 class="title mb-10">Flights</h5>
-                                        <p>Lorem ipsum dolor sit amet.</p>
+                                        <!-- <p>Lorem ipsum dolor sit amet.</p> -->
                                     </div>
                                 </div> <!-- single services -->
 
@@ -882,7 +611,7 @@
                                     </div>
                                     <div class="services-content mt-20">
                                         <h5 class="title mb-10">Visa's</h5>
-                                        <p>Lorem ipsum dolor sit amet.</p>
+                                        <!-- <p>Lorem ipsum dolor sit amet.</p> -->
                                     </div>
                                 </div> <!-- single services -->
 
@@ -892,7 +621,7 @@
                                     </div>
                                     <div class="services-content mt-20">
                                         <h5 class="title mb-10">Day Tours</h5>
-                                        <p>Lorem ipsum dolor sit amet.</p>
+                                        <!-- <p>Lorem ipsum dolor sit amet.</p> -->
                                     </div>
                                 </div> <!-- single services -->
                             </div>
@@ -903,7 +632,7 @@
                                     </div>
                                     <div class="services-content mt-20">
                                         <h5 class="title mb-10">Car Hire</h5>
-                                        <p>Lorem ipsum dolor sit amet.</p>
+                                        <!-- <p>Lorem ipsum dolor sit amet.</p> -->
                                     </div>
                                 </div> <!-- single services -->
 
@@ -913,7 +642,7 @@
                                     </div>
                                     <div class="services-content mt-20">
                                         <h5 class="title mb-10">Holiday Packages</h5>
-                                        <p>Lorem ipsum dolor sit amet.</p>
+                                        <!-- <p>Lorem ipsum dolor sit amet.</p> -->
                                     </div>
                                 </div> <!-- single services -->
 
@@ -924,7 +653,7 @@
                                     <div class="services-content mt-20">
                                         <h5 class="title mb-10">Honeymoon Packages
                                         </h5>
-                                        <p>Lorem ipsum dolor sit amet.</p>
+                                        <!-- <p>Lorem ipsum dolor sit amet.</p> -->
                                     </div>
                                 </div> <!-- single services -->
                             </div>
@@ -963,6 +692,26 @@
                         </div> <!-- single showcase -->
                         <div class="single-showcase">
                             <img src="assets/images/showcase/t-2.jpg" alt="Testimonial">
+                            <!-- <a href="#" class="main-btn">Full Preview</a> -->
+                        </div> <!-- single showcase -->
+                        <div class="single-showcase">
+                            <img src="assets/images/showcase/t-3.jpg" alt="Testimonial">
+                            <!-- <a href="#" class="main-btn">Full Preview</a> -->
+                        </div> <!-- single showcase -->
+                        <div class="single-showcase">
+                            <img src="assets/images/showcase/t-4.jpg" alt="Testimonial">
+                            <!-- <a href="#" class="main-btn">Full Preview</a> -->
+                        </div> <!-- single showcase -->
+                        <div class="single-showcase">
+                            <img src="assets/images/showcase/t-5.jpg" alt="Testimonial">
+                            <!-- <a href="#" class="main-btn">Full Preview</a> -->
+                        </div> <!-- single showcase -->
+                        <div class="single-showcase">
+                            <img src="assets/images/showcase/t-6.jpg" alt="Testimonial">
+                            <!-- <a href="#" class="main-btn">Full Preview</a> -->
+                        </div> <!-- single showcase -->
+                        <div class="single-showcase">
+                            <img src="assets/images/showcase/t-7.jpg" alt="Testimonial">
                             <!-- <a href="#" class="main-btn">Full Preview</a> -->
                         </div> <!-- single showcase -->
                     </div> <!-- showcase active -->
@@ -1007,7 +756,7 @@
                         <div class="testimonial-active">
                             <div class="single-testimonial">
                                 <i class="lni-quotation"></i>
-                                <p class="mb-30">Has a good understanding of customer
+                                <p class="mb-30"> Has a good understanding of customer
                                     travel needs and has vast experience in the travel industry.
                                 </p>
                                 <h6 class="title">Mwila Musokota Jere</h6>
@@ -1053,7 +802,67 @@
     </section>
 
     <!--====== TESTIMONIAL PART ENDS ======-->
+   <!--======  BLOG PART START ======-->
+    
+   <section id="blog" class="blog-area pt-125">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="section-title text-center pb-25">
+                    <h3 class="title mb-15">Get in touch with us</h3>
+                    <!-- <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p> -->
+                </div> <!-- section title -->
+            </div>
+        </div> <!-- row -->
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6">
+                <div class="single-blog mt-30">
+                    <div class="blog-image" onclick="showFullscreenImage('assets/images/blog/dubai.jpg')">
+                        <img src="assets/images/blog/dubai.jpg" alt="Blog">
+                    </div>
+                    <div class="blog-content">
+                        <div class="content">
+                            <h4 class="title"><a href="#">Airfares from Lusaka</a></h4>
+                            <span>17 Jan, 2024</span>
+                        </div>
+                    </div>
+                </div> <!-- single blog -->
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-blog mt-30">
+                    <div class="blog-image" onclick="showFullscreenImage('assets/images/blog/liv.jpg')">
+                        <img src="assets/images/blog/liv.jpg" alt="Blog">
+                    </div>
+                    <div class="blog-content">
+                        <div class="content">
+                            <h4 class="title"><a href="#">Festive Getaway</a></h4>
+                            <span>17 Jan, 2024</span>
+                        </div>
+                    </div>
+                </div> <!-- single blog -->
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-blog mt-30">
+                    <div class="blog-image" onclick="showFullscreenImage('assets/images/blog/zan.jpg')">
+                        <img src="assets/images/blog/zan.jpg" alt="Blog">
+                    </div>
+                    <div class="blog-content">
+                        <div class="content">
+                            <h4 class="title"><a href="#">Zanzibar</a></h4>
+                            <span>17 Jan, 2024</span>
+                        </div>
+                    </div>
+                </div> <!-- single blog -->
+            </div>
+        </div>
+    
+        <div class="fullscreen-image" onclick="hideFullscreenImage()">
+            <img id="fullscreen-img" src="" alt="Fullscreen Image">
+        </div>
+    </div> <!-- container -->
+</section>
 
+<!--======  BLOG PART ENDS ======-->
     <!--======  BRANDS PART START ======-->
     <section id="brands" class="brands-area pt-125">
         <div class="container">
@@ -1526,30 +1335,42 @@
 
     <!--====== BACK TO TOP PART ENDS ======-->
 
+    <script>
+        function showFullscreenImage(imageSrc) {
+            const fullscreenImage = document.getElementById('fullscreen-img');
+            fullscreenImage.src = imageSrc;
+            document.querySelector('.fullscreen-image').style.display = 'flex';
+            document.body.classList.add('fullscreen-open'); // Add class to body
+        }
+
+        function hideFullscreenImage() {
+            document.querySelector('.fullscreen-image').style.display = 'none';
+            document.body.classList.remove('fullscreen-open'); // Remove class from body
+        }
+    </script>
 
 
-
-    <!--====== jquery js ======-->
-    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
-    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
-
-    <!--====== Bootstrap js ======-->
-    <script src="assets/js/bootstrap.min.js"></script>
-
-    <!--====== Slick js ======-->
-    <script src="assets/js/slick.min.js"></script>
-
-    <!--====== Magnific Popup js ======-->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-
-    <!--====== nav js ======-->
-    <script src="assets/js/jquery.nav.js"></script>
-
-    <!--====== Scroll It js ======-->
-    <script src="assets/js/scrollIt.min.js"></script>
-
-    <!--====== Main js ======-->
-    <script src="assets/js/main.js"></script>
+     <!--====== jquery js ======-->
+     <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+     <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+ 
+     <!--====== Bootstrap js ======-->
+     <script src="assets/js/bootstrap.min.js"></script>
+     
+     <!--====== Slick js ======-->
+     <script src="assets/js/slick.min.js"></script>
+     
+     <!--====== Magnific Popup js ======-->
+     <script src="assets/js/jquery.magnific-popup.min.js"></script>
+     
+     <!--====== nav js ======-->
+     <script src="assets/js/jquery.nav.js"></script>
+     
+     <!--====== Scroll It js ======-->
+     <script src="assets/js/scrollIt.min.js"></script>
+     
+     <!--====== Main js ======-->
+     <script src="assets/js/main.js"></script>
 
 </body>
 
