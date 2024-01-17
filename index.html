@@ -47,9 +47,30 @@
 
         .single-brand img {
             max-width: 100px;
-            /* Adjust the size of each logo */
             height: auto;
         }
+
+        .fullscreen-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            display: none;
+            overflow-y: auto;
+        }
+
+        .fullscreen-image img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        
     </style>
 
 </head>
@@ -226,7 +247,7 @@
                 <div class="col-lg-6">
                     <div class="single-discount-product mt-30">
                         <div class="product-image">
-                            <img src="assets/images/discount-product/product-1.jpg" alt="Product">
+                            <img src="assets/images/discount-product/product-3.jpg" alt="Product">
                         </div> <!-- product image -->
                         <div class="product-content">
                             <h4 class="content-title mb-15" style="color: white;">Local travel</h4>
@@ -237,11 +258,11 @@
                 <div class="col-lg-6">
                     <div class="single-discount-product mt-30">
                         <div class="product-image">
-                            <img src="assets/images/discount-product/product-2.jpg" alt="Product">
+                            <img src="assets/images/discount-product/product-4.jpg" alt="Product">
                         </div> <!-- product image -->
                         <div class="product-content">
-                            <h4 class="content-title mb-15" style="color: white;">International travel</h4>
-                            <a href="#v-pills-outdoor" style="color: white;">View Collection <i class="lni-chevron-right"></i></a>
+                            <h4 class="content-title mb-15" style="color: white;">Travel tips</h4>
+                            <!-- <a href="#v-pills-outdoor" style="color: white;">View Collection <i class="lni-chevron-right"></i></a> -->
                         </div> <!-- product content -->
                     </div> <!-- single discount product -->
                 </div>
@@ -735,7 +756,7 @@
                         <div class="testimonial-active">
                             <div class="single-testimonial">
                                 <i class="lni-quotation"></i>
-                                <p class="mb-30">Has a good understanding of customer
+                                <p class="mb-30"> Has a good understanding of customer
                                     travel needs and has vast experience in the travel industry.
                                 </p>
                                 <h6 class="title">Mwila Musokota Jere</h6>
@@ -781,7 +802,67 @@
     </section>
 
     <!--====== TESTIMONIAL PART ENDS ======-->
+   <!--======  BLOG PART START ======-->
+    
+   <section id="blog" class="blog-area pt-125">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="section-title text-center pb-25">
+                    <h3 class="title mb-15">Get in touch with us</h3>
+                    <!-- <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p> -->
+                </div> <!-- section title -->
+            </div>
+        </div> <!-- row -->
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6">
+                <div class="single-blog mt-30">
+                    <div class="blog-image" onclick="showFullscreenImage('assets/images/blog/dubai.jpg')">
+                        <img src="assets/images/blog/dubai.jpg" alt="Blog">
+                    </div>
+                    <div class="blog-content">
+                        <div class="content">
+                            <h4 class="title"><a href="#">Airfares from Lusaka</a></h4>
+                            <span>17 Jan, 2024</span>
+                        </div>
+                    </div>
+                </div> <!-- single blog -->
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-blog mt-30">
+                    <div class="blog-image" onclick="showFullscreenImage('assets/images/blog/liv.jpg')">
+                        <img src="assets/images/blog/liv.jpg" alt="Blog">
+                    </div>
+                    <div class="blog-content">
+                        <div class="content">
+                            <h4 class="title"><a href="#">Festive Getaway</a></h4>
+                            <span>17 Jan, 2024</span>
+                        </div>
+                    </div>
+                </div> <!-- single blog -->
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-blog mt-30">
+                    <div class="blog-image" onclick="showFullscreenImage('assets/images/blog/zan.jpg')">
+                        <img src="assets/images/blog/zan.jpg" alt="Blog">
+                    </div>
+                    <div class="blog-content">
+                        <div class="content">
+                            <h4 class="title"><a href="#">Zanzibar</a></h4>
+                            <span>17 Jan, 2024</span>
+                        </div>
+                    </div>
+                </div> <!-- single blog -->
+            </div>
+        </div>
+    
+        <div class="fullscreen-image" onclick="hideFullscreenImage()">
+            <img id="fullscreen-img" src="" alt="Fullscreen Image">
+        </div>
+    </div> <!-- container -->
+</section>
 
+<!--======  BLOG PART ENDS ======-->
     <!--======  BRANDS PART START ======-->
     <section id="brands" class="brands-area pt-125">
         <div class="container">
@@ -1254,7 +1335,19 @@
 
     <!--====== BACK TO TOP PART ENDS ======-->
 
+    <script>
+        function showFullscreenImage(imageSrc) {
+            const fullscreenImage = document.getElementById('fullscreen-img');
+            fullscreenImage.src = imageSrc;
+            document.querySelector('.fullscreen-image').style.display = 'flex';
+            document.body.classList.add('fullscreen-open'); // Add class to body
+        }
 
+        function hideFullscreenImage() {
+            document.querySelector('.fullscreen-image').style.display = 'none';
+            document.body.classList.remove('fullscreen-open'); // Remove class from body
+        }
+    </script>
 
 
      <!--====== jquery js ======-->
